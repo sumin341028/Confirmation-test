@@ -1,0 +1,85 @@
+body{
+    font-family: sans-serif;
+    background-color:#f9f9f9;
+    padding: 40px;
+}
+
+h1{
+    font-size:32px;
+    color:#333;
+    font-weight: bold;
+}
+h2{
+    font-size:24px;
+    color:#666;
+}
+p.small{
+    font-size:12px;
+}
+p.normal{
+    font-size:16px;
+}
+p.large{
+    font-size:24px;
+}
+
+.box1{
+    background-color: #f5f5f5;
+    padding:10px;
+    border: 1px solid #ccc;
+}
+
+.box2{
+    background-color: #e0f7fa;
+    padding:30px 10px;
+    border: 1px solid #80deea;
+}
+.box3{
+    background-color: #ffe0b2;
+    padding:10px;
+    margin:20px;
+    border: 1px solid #ff9800;
+}
+.box4{
+    background-color: #d1c4e9;
+    padding:30px 10px;
+    margin:10px 30px;
+    border: 2px bashed #673ab7;
+}
+
+
+input, textarea,button{
+    display:block;
+    margin-bottom:15px;
+    padding:10px;
+    width:300px;
+    font-size:16px;
+
+}
+
+ul{
+    color:red;
+    margin-bottom:20px;
+}
+
+button{
+    background-color: #4CAF50;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+button:hover{
+    background-color: #45a049;
+}
+
+.button-hover {
+    background-color: #4caf50; /* 緑色ベース */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer; /* マウス乗せると指になる */
+    transition: background-color 0.3s; /* 色変化がふわっと */
+  }
+
