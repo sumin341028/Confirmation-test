@@ -1,0 +1,331 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* ← 管理画面の背景色 */
+  font-family: 'Inika', serif;
+}
+
+.header {
+  position: relative; /* ログアウトボタンの基準にする */
+  text-align: center;
+  padding: 20px 0;
+  background-color: #fefefe;
+}
+
+.logo {
+  font-family: 'Inika', serif;
+  font-size: 36px;
+  color: #8B7969;
+  margin: 0;
+}
+
+.logout-form {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  margin: 0;
+}
+
+.logout-btn {
+  border: 1px solid #8B7969;
+  background-color: transparent;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-family: 'Inika', serif;
+  color: #8B7969;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* タイトル */
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  color: #7E5E52;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* フィルターフォーム */
+.filter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+/* ① 検索フォームの入力欄を広くする */
+.filter-form input[type="text"] {
+  width: 330px; /* お好みで 320px とかでもOK */
+}
+
+.filter-form input,
+.filter-form select {
+  height: 50px;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.filter-form select[name="gender"] {
+  width: 120px; /* ← 他よりちょっと小さく */
+}
+
+.filter-form select,
+.filter-form input[type="date"] {
+  height: 48px;
+  padding: 0 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 180px; /* ← ここで幅を少し広めに調整 */
+}
+
+.filter-form select {
+  background-color: #F4F4F4; /* ← エクスポートボタンと同じ背景 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 30px 10px 15px;
+  font-size: 14px;
+  color: #8B7969;
+  appearance: none; /* デフォルトの矢印を消す */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='70,100 30,40 110,40' fill='%238B7969'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+.filter-form input[type="date"] {
+  background-color: #F4F4F4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #8B7969;
+  appearance: none;
+  -webkit-appearance: none; /* Safari用 */
+  -moz-appearance: none;    /* Firefox用 */
+}
+.btn {
+  background-color: #8B7969;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-reset {
+  background-color: #D9C6B5;
+  color: #fff;
+  border: 1px solid #D9C6B5;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  line-height: 50px; /* 追加：高さと合わせる */
+  display: inline-block;
+  text-align: center;
+}
+
+/* テーブル */
+.table {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.table th {
+  background-color: #B87969;
+  color: #fff;
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #D9C6B5; 
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  border-bottom: 1px solid #D9C6B5;
+}
+
+/* 上部コントロール（エクスポート・ページネーション） */
+.top-controls {
+  max-width: 1180px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-form {
+  display: flex;
+  justify-content: space-between; /* 左右に分かれるように */
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 30px;
+  gap: 10px;
+}
+
+.export-area {
+  margin-bottom: 10px;
+}
+
+.export-btn {
+    background-color:#E1DBD699;
+    color: #8B7969;
+    border: 1px solid #8B7969;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.pagination-wrapper nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ページネーションの調整 */
+.pagination li {
+  margin: 0 2px;
+}
+
+.pagination .page-link {
+  color: #B87969;
+}
+
+.pagination .active .page-link {
+  background-color: #B87969;
+  border-color: #8B7969;
+  color: #fff;
+}
+
+/* 詳細ボタン */
+.detail-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #F4F4F4;
+  color: #8B7969;
+  border: 1px solid #D9C6B5;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.detail-btn:hover {
+  background-color: #e0dedc;
+}
+
+/* 成功メッセージ */
+.success-message {
+  text-align: center;
+  color: green;
+  margin: 20px 0;
+}
+
+/* モーダル全体 */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.modal {
+  width: 805px;
+  max-height: 90vh;
+  background-color: #fff;
+  border: none; /* ← 外枠のボーダー消す */
+  box-shadow: 4px 4px 4px rgba(184, 121, 105, 0.25);
+  padding: 40px 60px 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px; /* 中央に配置 */
+  transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+  background-color: #f4f4f4;
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  column-gap: 24px;
+  row-gap: 16px;
+  font-size: 14px;
+  color: #5c4b45;
+  line-height: 1.8;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: none; /* ← これで囲いを消す！ */
+  box-shadow: none;
+}
+
+.modal-content .label {
+  text-align: right;
+  font-weight: bold;
+  color: #5c4b45;
+  white-space: nowrap;
+}
+
+.modal-content .value {
+  text-align: left;
+  word-break: break-word;
+}
+
+.btn-delete {
+  display: block;
+  margin: 60px auto 20px;
+  padding: 10px 24px;
+  background-color: #BA370D;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #a25d50;
+}

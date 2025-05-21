@@ -1,0 +1,85 @@
+body {
+    background-color: #D9C6B5;
+    font-family: 'Inika', serif;
+  }
+  
+  .form-title {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px; /* ←余白広めに */
+    color: #8B7969;
+    font-family: 'Inika', serif;
+}
+
+.form-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 60px 40px 80px; /* ←下の余白を多めに */
+    width: 500px;
+    margin: 0 auto;
+}
+.form-wrapper {
+    width: 736px;
+    height: auto; /* ← 高さは内容に合わせて伸び縮みさせる */
+    background: #fff;
+    border: 1px solid #C5B9B0;
+    border-radius: 10px;
+    padding: 150px; /* ← 内側に余白を追加 */
+    margin: 60px auto;
+    margin-top:40px; /* ← 上下中央に近づけて、左右は中央寄せ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* お好みで立体感 */
+}
+  
+  .form-group {
+    max-width: 445px;
+    margin: 0 auto 20px;
+    margin-bottom:50px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #3e3e3e;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  input::placeholder {
+    color: #c0c0c0;
+  }
+  
+  button {
+    display: block;
+    background-color: #82756A;
+    color: #fff;
+    width: 160px;
+    height: 46px;
+    margin: 30px auto 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }

@@ -1,0 +1,45 @@
+/* === 全体背景とフォントのみ === */
+body {
+    background-color: #D9C6B5;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  /* ヘッダー全体 */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* 中央ロゴ */
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Inika', serif;
+  color: #8B7969;
+  margin: 0;
+}
+
+/* Register or Logout ボタン */
+.header-btn, .logout-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  background-color: #fff;
+  color: #D9C6B5;
+  border: 1px solid #6C4E36;
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout-form {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}

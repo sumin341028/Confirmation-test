@@ -6,40 +6,43 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ContactRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
     public function authorize()
     {
+        // 認証不要なら true にする（基本trueでOK）
         return true;
     }
-
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
         return [
-            'name' => 'required|min:2',
+            'last_name' => 'required|string|max:50',
+            'first_name' => 'required|string|max:50',
+            'gender' => 'required|in:1,2,3',
             'email' => 'required|email',
-            'message' => 'required|max:500',
-
-            //
+            'tel1' => 'required|digits:3',
+            'tel2' => 'required|digits:4',
+            'tel3' => 'required|digits:4',
+            'address' => 'required|string|max:100',
+            'building' => 'nullable|string|max:100',
+            'category_id' => 'required|exists:categories,id',
+            'detail' => 'required|string|max:120',
         ];
     }
+
     public function messages()
     {
         return [
-            'name.required' => '名前を入力してください',
-            'name.min' => '名前は2文字以上で入力してください',
-            'email.required' => 'メールアドレスを入力してください',    
+            'last_name.required' => '姓を入力してください',
+            'first_name.required' => '名を入力してください',
+            'gender.required' => '性別を選択してください',
+            'email.required' => 'メールアドレスを入力してください',
             'email.email' => '正しいメールアドレスを入力してください',
-            'message.required' => 'メッセージを入力してください',
-            'message.max' => 'メッセージは500文字以内で入力してください',
+            'tel1.required' => '電話番号を入力してください',
+            'tel2.required' => '電話番号を入力してください',
+            'tel3.required' => '電話番号を入力してください',
+            'address.required' => '住所を入力してください',
+            'category_id.required' => 'お問い合わせの種類を選択してください',
+            'detail.required' => 'お問い合わせ内容を入力してください',
+            'detail.max' => 'お問い合わせ内容は120文字以内で入力してください',
         ];
     }
 }
